@@ -1,0 +1,29 @@
+$dsn = 'mysql:dbname=phpkiso;host=localhost';
+$user = 'root';
+$password = '';
+$dbh = new PDO($dsn, $user, $password);
+$dbh->query('SET NAMES utf8');
+
+$sql = 'INSERT INTO anketo (nickname,email,goiken) VALUES ("'.$nickname.'","'.$email.'","'.$goiken.'")';
+$stmt = $dbh->prepare($sql);
+$stmt->execute();
+
+$dbh = null;
+
+SELECT goiken FROM anket WHERE code=1
+
+
+Error: MySQL shutdown unexpectedly.
+This may be due to a blocked port, missing dependencies, 
+improper privileges, a crash, or a shutdown by another method.
+Press the Logs button to view error logs and check
+the Windows Event Viewer for more clues
+If you need more help, copy and post this
+entire log window on the forums
+
+
+portcheck.ini
+
+
+
+
